@@ -54,7 +54,7 @@ function createObject() {
 }
 
 function createUnitPod() {
-  let unitPodGeometry = new THREE.CylinderGeometry(0.5, 0.5, 10, 16);
+  let unitPodGeometry = new THREE.CylinderGeometry(0.5, 0.5, 5, 5);
   let unitPodMaterial = new THREE.MeshPhongMaterial({ color: 0xc2c2c2 });
   let unitPod = new THREE.Mesh(unitPodGeometry, unitPodMaterial);
   unitPod.position.x = 10;
@@ -81,19 +81,19 @@ function createTriPod(unitPod) {
 }
 
 function createCamera() {
-  let camGeometry = new THREE.BoxGeometry(4.5, 2.5, 2.5);
+  let camGeometry = new THREE.BoxGeometry(3.5, 1.8, 2.5);
   let camMaterial = new THREE.MeshPhongMaterial({ color: 0x404040 });
   let cam = new THREE.Mesh(camGeometry, camMaterial);
-  cam.position.y = 5;
+  cam.position.y = 3.2;
   // cam.position.x = 0;
   group.add(cam);
 }
 
 function createLens() {
-  let lensGeometry = new THREE.TorusGeometry(1, 0.2 , 16, 100);
+  let lensGeometry = new THREE.TorusGeometry(0.5, 0.2 , 16, 100);
   let lensMaterial = new THREE.MeshPhongMaterial({ color: 0x404040 });
   let lens = new THREE.Mesh(lensGeometry, lensMaterial);
-  lens.position.y = 5;
+  lens.position.y = 3.2;
   // lens.position.x = 2;
   lens.position.z = 1.6;
   group.add(lens);
